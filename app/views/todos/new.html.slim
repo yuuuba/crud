@@ -1,0 +1,76 @@
+h1 タスクの新規登録
+
+.nav.justify-content-end
+  = link_to '一覧', todos_path, class: 'nav-link'
+
+= form_with model: @task, local: true do |f|
+  .form-group
+    =f.label :name
+    =f.text_field :name, class: 'form-control', id: 'task_name'
+  .form-group
+    =f.label :descripstion
+    =f.text_area :descripstion, rows: 5, class: 'form-control', id: 'task_description'
+  =f.submit nil, class: 'btn btn-primary'
+
+  div
+    h1 ピカわかメニュー
+    ul
+      li Ruby
+      li Rails
+      li HTML 
+
+  div
+    h1 pikawakaメニュー
+    ul
+      li ruby
+      li rails
+      li html
+
+div
+html
+meta
+header
+footer
+table
+h1
+p
+a
+ul
+li
+
+p
+  | pikawaka
+
+p
+  |
+    ピカイチわかりた垂<br>
+    プログラ mキングサイトです
+
+p
+  |
+    ピカイチわかりやすい<br>
+    プログラミングサイトです
+
+    a href='http://www.pikawaka.com' ピカわか
+
+#pikawaka 
+  ピカ
+
+div.pikawaka
+  ピカ
+  
+.pikawaka
+  ピカ
+
+#pikawaka.hoge.huga 
+  ピカ
+
+.pikawaka.hoge
+
+/ :javascript
+
+
+/ 
+/ - @users.each do |user|
+/ = user.name
+
