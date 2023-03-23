@@ -1,4 +1,12 @@
 
 - @todos.each do |todo|
-  = todo.name
-  = todo.body
+  tr
+    th タイトル
+    td = todo.title
+  <br>
+  tr
+    th 内容
+    td = todo.body
+  <br>
+  <br>
+= link_to "新規作成", new_todo_path
