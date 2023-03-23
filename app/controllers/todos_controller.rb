@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-  before_action :set_todo, only: %i[ show edit update destroy ]
+  before_action :set_todo, only: %i[ show edit update destroy]
   
   def index
     @todos = Todo.all
@@ -30,6 +30,8 @@ class TodosController < ApplicationController
   end
 
   def destroy
+    @todo.destroy
+    redirect_to todos_url, notice: "Todoが削除されました"
   end
 
   private

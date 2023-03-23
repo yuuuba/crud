@@ -5,6 +5,7 @@
     td = todo.title
     = link_to "詳細",todo_path(todo)
     = link_to "編集",edit_todo_path(todo)
+    = link_to "削除",todo, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, status: :see_other, class: 'btn btn-danger'
   <br>
   tr
     th 内容
