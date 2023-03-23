@@ -24,6 +24,9 @@ class TodosController < ApplicationController
   end
 
   def update
+    if @todo.update(todo_params)
+      redirect_to todos_path
+    end
   end
 
   def destroy
