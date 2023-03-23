@@ -1,0 +1,11 @@
+h1 Todo詳細
+
+= @todo.id
+= @todo.title
+= @todo.body
+= link_to "編集",edit_todo_path(@todo.id)
+= link_to "削除",todo_path(@todo.id), method: :delete,data: { confirm: "Todoを削除しますか？"}, class: 'btn btn-danger'
+
+
+= link_to '一覧', todos_path, class: 'nav-link'
+
